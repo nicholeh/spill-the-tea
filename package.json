@@ -1,0 +1,27 @@
+{
+  "name": "spill-the-tea",
+  "version": "1.0.0",
+  "description": "A discord bot game of writing prompts meant to encourage developing characters and their relationships.",
+  "main": "prompt_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholeh/spill-the-tea.git"
+  },
+  "keywords": [
+    "discord",
+    "writing",
+    "prompt",
+    "character",
+    "development",
+    "nanowrimo"
+  ],
+  "author": "Nichole Huffman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholeh/spill-the-tea/issues"
+  },
+  "homepage": "https://github.com/nicholeh/spill-the-tea#readme"
+}
