@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/nicholeh/spill-the-tea/issues"
   },
-  "homepage": "https://github.com/nicholeh/spill-the-tea#readme"
+  "homepage": "https://github.com/nicholeh/spill-the-tea#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
 }
