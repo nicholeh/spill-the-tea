@@ -1,3 +1,5 @@
+const allPrompts = []
+
 const dialogue_prompts = [
     'Two characters are strategizing a plan.',
     'Two characters are arguing.',
@@ -5,6 +7,7 @@ const dialogue_prompts = [
     'Two characters are discussing another character who is not present.',
     'A character is trying to get information from another.',
     'A character is trying to get your character to express how they feel about something.',
+    'What do you need right now, more than anything?',
 ]
 
 const character_prompts = [
@@ -17,14 +20,18 @@ const character_prompts = [
     'Someone tells your character no.',
     'Someone insults your character.',
     'Someone questions your character’s motives',
+    'Describe the moment when your character knows when they are in love. i.e. I know I\'m in love when _____________.',
+    'What is your character lying to themselves about?',
 ]
 
-const rework_these = [
-    'Describe the moment when your character knows when they are in love. | I know I\'m in love when _____________.',
-    'What is your character lying to themselves about? | Are you lying to yourself about anything?',
+const organize_these = [
     'Is there anyone who\'s changed your life but doesn\'t know it?',
-    'What do you need right now, more than anything?',
-    
+    'Write a scene that captures the sadness of the word "almost"',
+    'well that was a kiss i\'ll never forget',
+    'a scene depicting unrequited love',
+    'one character decides to follow/stalk another',
+    'one of your characters goes missing',
+    'write off this dialog "Don’t trust him.”'
 ]
 
 const perception = [
@@ -87,3 +94,7 @@ const reflection = [
     'What am I most qualified to give advice about?',
     
 ]
+
+allPrompts.push(...dialogue_prompts, ...character_prompts, ...organize_these, ...perception, ...connection, ...reflection)
+
+module.exports = { allPrompts, dialogue_prompts, character_prompts, perception, connection, reflection }
