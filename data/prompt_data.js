@@ -1,37 +1,45 @@
 const allPrompts = []
 
 const dialogue_prompts = [
-    'Two characters are strategizing a plan.',
+    'Two of your characters are in trouble and have to come up with a plan.',
     'Two characters are arguing.',
-    'A character has professed their feelings for another character.',
-    'Two characters are discussing another character who is not present.',
-    'A character is trying to get information from another.',
-    'A character is trying to get your character to express how they feel about something.',
-    'What do you need right now, more than anything?',
+    '*\"How do you feel about me? Because I am in love with you.\"* A character professes how they feel about your character.',
+    'Your character can\'t take it anymore. Tell their love interest how they truly feel.',
+    '\"What do you think about him/her/them?\" Two characters discuss another character who is not present.',
+    '*\"Tell me what you know.\"* A character is trying to get information from another.',
+    '*\"I can\'t help you if you won\'t talk to me\"* A character is trying to get your character to express how they feel about something.',
+    '*What do you need right now, more than anything?* A character is upset and your character doesn\'t know what to do.',
+    '*I\'m sorry, but I don\'t feel the same way about you.*',
+    '*Don\’t trust him/her/them.*',
 ]
 
 const character_prompts = [
-    'Your character is robbed.',
-    'Your character is injured.',
-    'Your character is at a party.',
-    'Your character is being held captive.',
-    'Your character witnesses an injustice.',
     'Two characters want the same item but there is only one.',
     'Someone tells your character no.',
     'Someone insults your character.',
     'Someone questions your character’s motives',
-    'Describe the moment when your character knows when they are in love. i.e. I know I\'m in love when _____________.',
-    'What is your character lying to themselves about?',
+    'Write a character\'s inner monologue during the moment they realize they are in love.',
+    'What is your character lying to themselves about? Another character confronts them about it.',
+    'Is there anyone who changed your character\'s life that doesn\'t know it? Write your character either telling that person or describing how much that character means to them to someone else.',
+    'Your character has become increasingly obsessed with something or someone. Write their inner monologue as the object of their obsession begans to consume them.'
+]
+
+const situation_prompts = [
+    'Your character is robbed.',
+    'Your character is injured.',
+    'Your character is at a party.',
+    'Your character is being held captive.',
+    'Your character witnesses an injustice that goes against their moral beliefs. What do they do?',
+    'One character decides to follow/stalk another',
+    'One of your characters goes missing',
+]
+
+const spicy_prompts = [
+    'Well that was a kiss i\'ll never forget',
 ]
 
 const organize_these = [
-    'Is there anyone who\'s changed your life but doesn\'t know it?',
     'Write a scene that captures the sadness of the word "almost"',
-    'well that was a kiss i\'ll never forget',
-    'a scene depicting unrequited love',
-    'one character decides to follow/stalk another',
-    'one of your characters goes missing',
-    'write off this dialog "Don’t trust him.”'
 ]
 
 const perception = [
@@ -95,6 +103,6 @@ const reflection = [
     
 ]
 
-allPrompts.push(...dialogue_prompts, ...character_prompts, ...organize_these, ...perception, ...connection, ...reflection)
+allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...organize_these, ...perception, ...connection, ...reflection)
 
 module.exports = { allPrompts, dialogue_prompts, character_prompts, perception, connection, reflection }
