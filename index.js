@@ -1,5 +1,5 @@
 const { parseCommand } = require('./helpers/parseCommands')
-const { getPrompt } = require('./commands/getPrompt')
+const prompt = require('./commands/getPrompt')
 
 const Discord = require('discord.js')
 const config = require('./config.json')
@@ -16,6 +16,6 @@ client.on('message', (message) => {
     const request = parseCommand(prefix, message)
 
     if(request.command === 'prompt') {
-        getPrompt(message)
+        prompt.getRandomPromptFromAll(message)
     }
 })
