@@ -1,5 +1,6 @@
 const commandList = {
     'prompt': {
+        'command': 'prompt',
         'helperText': 'Returns a single prompt. *Please note, NSFW prompts are marked with a :hot_pepper:.*',
         'args': {
             'dialogue': 'Returns a single prompt focused on dialog between characters.',
@@ -10,3 +11,5 @@ const commandList = {
         }
     },
 }
+
+module.exports = { commandList }

@@ -1,5 +1,6 @@
 const { parseCommand } = require('./helpers/parseCommands')
 const prompt = require('./commands/getPrompt')
+const help = require('./commands/help.js')
 
 const Discord = require('discord.js')
 const config = require('./config.json')
@@ -14,6 +15,11 @@ client.on('message', (message) => {
     if (!message.content.startsWith(prefix)) return
 
     const request = parseCommand(prefix, message)
+
+    if(request.command === 'help') {
+        const helpText = help.buildOutput()
+        message.channel.send(helpText);
+    }
 
     if(request.command === 'prompt') {
         if(request.args && request.args.includes('dialogue')) {
