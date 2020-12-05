@@ -16,6 +16,22 @@ client.on('message', (message) => {
     const request = parseCommand(prefix, message)
 
     if(request.command === 'prompt') {
-        prompt.getRandomPromptFromAll(message)
+        if(request.args && request.args.includes('dialogue')) {
+            prompt.getRandomPromptFromDialogue(message)
+        }
+        else if(request.args && request.args.includes('character')) {
+            prompt.getRandomPromptFromCharacter(message)
+        }
+        else if(request.args && request.args.includes('situation')) {
+            prompt.getRandomPromptFromSituation(message)
+        }
+        else if(request.args && request.args.includes('spice')) {
+            prompt.getRandomPromptFromSpice(message)
+        }
+        else if(request.args && request.args.includes('abstract')) {
+            prompt.getRandomPromptFromAbstract(message)
+        } else {
+            prompt.getRandomPromptFromAllWithSpice(message)
+        }
     }
 })
