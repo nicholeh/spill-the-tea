@@ -85,7 +85,42 @@ const situation_prompts = [
 ]
 
 const spicy_prompts = [
-    'Well that was a kiss i\'ll never forget',
+    '*\"Well that was a kiss i\'ll never forget\"*',
+    'Two characters are slowly kissing. One breaks the kiss to say something, staying so close that they’re murmuring into the other’s mouth.',
+    'Your characters are moving around while kissing, stumbling over things, pushing each other back against the wall/onto the bed.',
+    'After building up so much tension, your character is kissing the other so desperately that their whole body curves into the other person’s, craving them.',
+    'Instead of pushing them away, a character throws their arms around the other person, holding them close while they kiss.',
+    'Wandering hands on the other person’s back, fingertips pressing under their top, drawing gentle circles against that small strip of bare skin that makes them break the kiss with a gasp.',
+    'Lazy morning kisses before they’ve even opened their eyes, still mumbling half-incoherently, not wanting to wake up.',
+    'Routine kisses where the other person presents their cheek/forehead for the hello/goodbye kiss without even looking up from what they’re doing.',
+    'Your character is kissed by their love interest for the first time. They cannot open their eyes for a few moments afterward from the shock.',
+    'The love interest gives your character one small kiss before pulling away, leaving them wanting more.',
+    'As your characters are arguing, one is staring at the other\'s lips, trying not to kiss them, before finally giving in.',
+    'A character stops the kiss to whisper, *\"I\'m sorry, are you sure you-\"* and the other character answers by kissing them more.',
+    'A hoarse whisper *\"kiss me\"*.',
+    'A soft kiss, before pulling away to leave a trail of light kisses down their neck.',
+    'Starting with a kiss meant to be gentle, ending up in passion.',
+    'A gentle *\"I love you\"* whispered after a soft kiss, followed immediately by a deeper kiss.',
+    'Your character is visibly upset, pacing the room. The other stops them, kissing their lips/nose/forehead.',
+    'Your character finds themselves sitting in the other’s lap.',
+    'Light kisses from behind meant to distract the other person from whatever they were intently doing.',
+    'Top of head kisses as the love interest walks by.',
+    'Lying there together, they didn\'t realize how thin the walls were. Listening to the noises from the other room, each character\'s mind wanders to the person beside them.',
+    'Your character bites their lip as they look over the other.',
+    'They tugged at the cloth, tearing off the shirt when it wouldn\'t give.',
+    'He stood before her and she couldn\'t help but notice it was bigger than she thought it would be.',
+    'Pushed up against the wall, all they could think about was how close they were.',
+    '*\"How hard do you like it?\"*',
+    'No one was looking.',
+    'After walking into the room, they froze at the scene before them.',
+    'The corridor was too narrow for two people.',
+    'He felt a twitch in his pants despite himself.',
+    'When the lights came back…',
+    '*\"Do you need some help?\"* Suddenly, I was aware of how small the space was.',
+    'I got on my knees…',
+    'Pulling some rope from the drawer, they playfully held it up for the other to see.',
+    'It triggered her gag reflex.',
+    '*\"Show me what you want.\"*'
 ]
 
 const abstract_prompts = [
