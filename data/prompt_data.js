@@ -1,4 +1,5 @@
 const allPrompts = []
+const allPromptsWithSpice = []
 
 const dialogue_prompts = [
     'Two of your characters are in trouble and have to come up with a plan.',
@@ -129,6 +130,7 @@ const abstract_prompts = [
     'Write a scene where two characters only communicate through body language.'
 ]
 
-allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...spicy_prompts, ...abstract_prompts)
+allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...abstract_prompts)
+allPromptsWithSpice.push(...allPrompts, ...spicy_prompts)
 
-module.exports = { allPrompts, dialogue_prompts, character_prompts, situation_prompts, spicy_prompts, abstract_prompts }
+module.exports = { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spicy_prompts, abstract_prompts }
