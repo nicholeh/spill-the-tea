@@ -8,37 +8,37 @@ const dialogue_prompts = [
     '\"What do you think about him/her/them?\" Two characters discuss another character who is not present.',
     '*\"Tell me what you know.\"* A character is trying to get information from another.',
     '*\"I can\'t help you if you won\'t talk to me\"* A character is trying to get your character to express how they feel about something.',
-    '*What do you need right now, more than anything?* A character is upset and your character doesn\'t know what to do.',
-    '*I\'m sorry, but I don\'t feel the same way about you.*',
-    '*Don\’t trust him/her/them.*',
+    '*\"What do you need right now, more than anything?\"* A character is upset and your character doesn\'t know what to do.',
+    '*\"I\'m sorry, but I don\'t feel the same way about you.\"*',
+    '*\"Don\’t trust them.\"*',
 ]
 
 const character_prompts = [
     'Two characters want the same item but there is only one.',
     'Someone tells your character no.',
     'Someone insults your character.',
-    'Someone questions your character’s motives',
+    'Someone questions your character’s motives.',
     'Write a character\'s inner monologue during the moment they realize they are in love.',
     'What is your character lying to themselves about? Another character confronts them about it.',
     'Is there anyone who changed your character\'s life that doesn\'t know it? Write your character either telling that person or describing how much that character means to them to someone else.',
-    'Your character has become increasingly obsessed with something or someone. Write their inner monologue as the object of their obsession begans to consume them.'
+    'Your character has become increasingly obsessed with something or someone. Write their inner monologue as the object of their obsession begins to consume them.'
 ]
 
 const situation_prompts = [
-    'Your character is robbed.',
-    'Your character is injured.',
-    'Your character is at a party.',
-    'Your character is being held captive.',
-    'Your character witnesses an injustice that goes against their moral beliefs. What do they do?',
-    'One character decides to follow/stalk another',
-    'One of your characters goes missing',
+    'A character is robbed.',
+    'A character is injured.',
+    'A character is at a party.',
+    'A character is being held captive.',
+    'A character witnesses an injustice that goes against their moral beliefs. What do they do?',
+    'One character decides to follow/stalk another.',
+    'One of your characters goes missing.',
 ]
 
 const spicy_prompts = [
     'Well that was a kiss i\'ll never forget',
 ]
 
-const organize_these = [
+const abstract_prompts = [
     'Write a scene that captures the sadness of the word "almost"',
 ]
 
@@ -103,6 +103,6 @@ const reflection = [
     
 ]
 
-allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...organize_these, ...perception, ...connection, ...reflection)
+allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...spicy_prompts, ...abstract_prompts, ...perception, ...connection, ...reflection)
 
 module.exports = { allPrompts, dialogue_prompts, character_prompts, perception, connection, reflection }
