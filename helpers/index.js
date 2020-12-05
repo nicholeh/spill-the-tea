@@ -8,6 +8,12 @@ class Tools {
      getRandomNumber(max) {
         return Math.floor(Math.random() * max)
      }
+    /**
+     * Adds emote before and after string.
+     */
+     wrapString(string, emote) {
+        return `${emote} ${string} ${emote}`
+     }
 }
 
 module.exports = new Tools()

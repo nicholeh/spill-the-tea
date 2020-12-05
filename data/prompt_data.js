@@ -130,7 +130,9 @@ const abstract_prompts = [
     'Write a scene where two characters only communicate through body language.'
 ]
 
-allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...abstract_prompts)
-allPromptsWithSpice.push(...allPrompts, ...spicy_prompts)
+const spice_prompts = spicy_prompts.map( i => `:hot_pepper: ${i}`)
 
-module.exports = { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spicy_prompts, abstract_prompts }
+allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...abstract_prompts)
+allPromptsWithSpice.push(...allPrompts, ...spice_prompts)
+
+module.exports = { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spice_prompts, abstract_prompts }
