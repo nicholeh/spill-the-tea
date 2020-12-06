@@ -8,6 +8,10 @@ const config = require('./config.json')
 const client = new Discord.Client()
 client.login(config.BOT_TOKEN)
 
+client.on("ready", () => {
+    console.log(`Logged in as ${client.user.tag}!`)
+})
+
 const prefix = '/'
 
 client.on('message', (message) => {
@@ -16,25 +20,25 @@ client.on('message', (message) => {
 
     const request = parseCommand(prefix, message)
 
-    if(request.command === 'help') {
+    if (request.command === 'help') {
         const helpText = help.buildOutput()
         message.channel.send(helpText);
     }
 
-    if(request.command === 'prompt') {
-        if(request.args && request.args.includes('dialogue')) {
+    if (request.command === 'prompt') {
+        if (request.args && request.args.includes('dialogue')) {
             prompt.getRandomPromptFromDialogue(message)
         }
-        else if(request.args && request.args.includes('character')) {
+        else if (request.args && request.args.includes('character')) {
             prompt.getRandomPromptFromCharacter(message)
         }
-        else if(request.args && request.args.includes('situation')) {
+        else if (request.args && request.args.includes('situation')) {
             prompt.getRandomPromptFromSituation(message)
         }
-        else if(request.args && request.args.includes('spice')) {
+        else if (request.args && request.args.includes('spice')) {
             prompt.getRandomPromptFromSpice(message)
         }
-        else if(request.args && request.args.includes('abstract')) {
+        else if (request.args && request.args.includes('abstract')) {
             prompt.getRandomPromptFromAbstract(message)
         } else {
             prompt.getRandomPromptFromAllWithSpice(message)
