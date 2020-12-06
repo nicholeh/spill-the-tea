@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "A discord bot game of writing prompts meant to encourage developing characters and their relationships.",
   "main": "prompt_data.js",
+  "engines": {
+    "node": "15.3.0",
+    "npm": "7.0.15"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
