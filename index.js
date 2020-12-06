@@ -1,3 +1,4 @@
+require("dotenv").config()
 const { parseCommand } = require('./helpers/parseCommands')
 const prompt = require('./commands/getPrompt')
 const help = require('./commands/help.js')
@@ -6,7 +7,6 @@ const Discord = require('discord.js')
 const config = require('./config.json')
 
 const client = new Discord.Client()
-// client.login(config.BOT_TOKEN)
 client.login(process.env.BOT_TOKEN)
 
 client.on("ready", () => {
