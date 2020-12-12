@@ -2,7 +2,7 @@
   "name": "spill-the-tea",
   "version": "1.0.0",
   "description": "A discord bot game of writing prompts meant to encourage developing characters and their relationships.",
-  "main": "prompt_data.js",
+  "main": "index.js",
   "engines": {
     "node": "15.3.0",
     "npm": "7.0.15"
