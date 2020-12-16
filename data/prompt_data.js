@@ -65,7 +65,7 @@ const character_prompts = [
     'Character A admits something to another character.',
     '*\"What parts of yourself do you see in me?\"* Write one character\'s perception of another.',
     'What does one character know about another that perhaps that character is unaware of?',
-    'How would once character describe the other to a stranger?',
+    'How would one character describe the other to a stranger?',
     'What does one character need from another that would make them feel closer to them?',
     'Write the moment when one character learns something that surprises them about another character.',
 ]
