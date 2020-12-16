@@ -1,5 +1,6 @@
 const allPrompts = []
 const allPromptsWithSpice = []
+const holiday_prompts = []
 
 const dialogue_prompts = [
     'Two of your characters are in trouble and have to come up with a plan.',
@@ -130,9 +131,35 @@ const abstract_prompts = [
     'Write a scene where two characters only communicate through body language.'
 ]
 
+const holiday_naughty = [
+    'Two characters are broken down on the side of the road during a frigid snowstorm.',
+    'After being snowed in, two characters must find a way to entertain themselves.',
+    'A sexy Santa\'s Elf appears on Christmas Eve. Bringing toys.',
+    'On a cold Winter\'s night, a sexy ghost appears.',
+    'There\'s a fireplace, a fur rug, and a magical brew of eggnog that seems to turn even the most enemies into lovers',
+    'Oh, no! My fingers are covered in icing!',
+    'An office party goes wrong.... in the best way.',
+    'Chestnuts roast by an open fire.',
+    'During a girls\' night in, there\'s a knock at the door. Santa and his dirty, dirty elves have arrived. (Strippers. They\'re strippers!)',
+]
+
+const holiday_nice = [
+    'A holiday meal goes terribly wrong.',
+    'Your character seeks out the most perfect gift for a loved one.',
+    'Two Carolers have a bit of rivalry competition',
+    'A sudden snowball fight happens in the unlikeliest of places',
+    'A character opens up a surprising Christmas gift',
+    'A holiday party amongst friends turns weird when a guy named Santa appears. He even acts like him, too.',
+    'Two characters meet while picking out a tree',
+    'A character shows up at a holiday gathering with a fake date',
+]
+
 const spice_prompts = spicy_prompts.map( i => `:hot_pepper: ${i}`)
+const holiday_naughty_prompts = holiday_naughty.map( i => `:smiling_imp: ${i}`)
+const holiday_nice_prompts = holiday_nice.map( i => `:angel: ${i}`)
 
 allPrompts.push(...dialogue_prompts, ...character_prompts, ...situation_prompts, ...abstract_prompts)
 allPromptsWithSpice.push(...allPrompts, ...spice_prompts)
+holiday_prompts.push(...holiday_naughty_prompts, ...holiday_nice_prompts)
 
-module.exports = { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spice_prompts, abstract_prompts }
+module.exports = { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spice_prompts, abstract_prompts, holiday_prompts }
