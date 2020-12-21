@@ -2,12 +2,24 @@ const tools = require('../helpers/index')
 const { allPrompts, allPromptsWithSpice, dialogue_prompts, character_prompts, situation_prompts, spice_prompts, abstract_prompts, holiday_prompts } = require('../data/prompt_data.js')
 
 const prompt_categories = {
-    'dialogue': dialogue_prompts,
-    'character': character_prompts,
-    'situation': situation_prompts,
-    'spice': spice_prompts,
-    'abstract': abstract_prompts,
-    'holiday': holiday_prompts,
+    'dialogue': tools.shuffle(dialogue_prompts),
+    'character': tools.shuffle(character_prompts),
+    'situation': tools.shuffle(situation_prompts),
+    'spice': tools.shuffle(spice_prompts),
+    'abstract': tools.shuffle(abstract_prompts),
+    'holiday': tools.shuffle(holiday_prompts),
+}
+
+const everyPrompt = tools.shuffle(allPromptsWithSpice)
+
+const promptList = {
+    'all': 0,
+    'dialogue': 0,
+    'character': 0,
+    'situation': 0,
+    'spice': 0,
+    'abstract': 0,
+    'holiday': 0,
 }
 
 const prompt_error = {
@@ -17,9 +29,16 @@ const prompt_error = {
 }
 
 class Prompts {
-    getRandomPrompt(list) {
-        const randomID = tools.getRandomNumber(list.length)
-        return list[randomID.toString()]
+    getRandomPrompt(topic, list) {
+        const currentIndex = promptList[topic]
+
+        if(promptList[topic] < list.length) {
+            promptList[topic]++
+            return list[currentIndex]
+        }
+
+        promptList[topic] = 0
+        return list[0]
     }
     getPrompt(args) {
         if(args && args.length > 1) {
@@ -27,11 +46,11 @@ class Prompts {
         }
 
         if(args && args.length === 0) {
-            return this.getRandomPrompt(allPromptsWithSpice)
+            return this.getRandomPrompt('all', everyPrompt)
         }
 
         if(args && args.length === 1) {
-            return Object.keys(prompt_categories).includes(args[0]) ? this.getRandomPrompt(prompt_categories[args[0]]) : prompt_error.notACategory
+            return Object.keys(prompt_categories).includes(args[0]) ? this.getRandomPrompt(args[0], prompt_categories[args[0]]) : prompt_error.notACategory
         }
 
         return prompt_error.how
