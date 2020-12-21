@@ -1,5 +1,5 @@
 require("dotenv").config()
-const { parseCommand } = require('./helpers/parseCommands')
+const tools = require('./helpers/index.js')
 const prompt = require('./commands/getPrompt')
 const help = require('./commands/help.js')
 
@@ -18,7 +18,7 @@ client.on('message', (message) => {
     if (message.author.bot) return
     if (!message.content.startsWith(prefix)) return
 
-    const request = parseCommand(prefix, message)
+    const request = tools.parseCommand(prefix, message)
     let messageToSend = ''
 
     if (request.command === 'help') {
