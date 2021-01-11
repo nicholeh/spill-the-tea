@@ -14,6 +14,8 @@ client.on("ready", () => {
 
 const prefix = '/'
 
+const commands = ['help', 'prompt']
+
 client.on('message', (message) => {
     if (message.author.bot) return
     if (!message.content.startsWith(prefix)) return
@@ -27,6 +29,10 @@ client.on('message', (message) => {
 
     if (request.command === 'prompt') {
         messageToSend = prompt.getPrompt(request.args)
+    }
+
+    if (!commands.includes(request.command)) {
+        messageToSend = 'Sorry that is not one of my available commands. Please type `/help` to view available commands.'
     }
 
     message.channel.send(messageToSend)
